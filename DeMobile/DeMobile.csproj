@@ -196,6 +196,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="TesteConexao.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -228,6 +229,13 @@
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesteConexao.aspx.cs">
+      <DependentUpon>TesteConexao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TesteConexao.aspx.designer.cs">
+      <DependentUpon>TesteConexao.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />

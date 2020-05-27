@@ -2,8 +2,16 @@
 
 <!DOCTYPE html>
 
-html>
+<html>
 <head runat="server">
+    <script type="text/javascript">
+        function ValidNumeric() {
+
+            var charCode = (event.which) ? event.which : event.keyCode;
+            if (charCode >= 48 && charCode <= 57) { return true; }
+            else { return false; }
+        } 
+    </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -23,14 +31,12 @@ html>
             <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="TesteBD.aspx">Teste BD</a>
+                        <a class="nav-link" href="TesteConexao.aspx">Teste BD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Listar.aspx">Listar BD</a>
+                        <a class="nav-link" href="cli_inserir.aspx">Inserir cliente</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Inserir.aspx">Inserir BD</a>
-                    </li>
+                    
                 </ul>
             </div>
         </nav>
