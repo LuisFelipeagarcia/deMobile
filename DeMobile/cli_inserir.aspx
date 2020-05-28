@@ -14,24 +14,23 @@
         </div>
     </div>
     <div class="row" style="margin-top:15px">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <label>Email: </label>
             <asp:RequiredFieldValidator ID="rfvEmail" ControlToValidate="txtEmail" ErrorMessage="*" ForeColor="Red" runat="server"></asp:RequiredFieldValidator>
             <asp:TextBox ID="txtEmail" runat="server" MaxLength="100" CssClass="form-control"></asp:TextBox>
         </div>
-    </div>
-    <div class="row" style="margin-top:15px">
-        <div class="col-md-2">
+        <div class="col-md-1">
             <label>DDD: </label>
             <asp:RequiredFieldValidator ID="rfvDdd" ControlToValidate="txtDdd" ErrorMessage="*" ForeColor="Red" runat="server"></asp:RequiredFieldValidator>
             <asp:TextBox ID="txtDdd" runat="server" MaxLength="3" CssClass="form-control" onkeypress="return ValidNumeric()"></asp:TextBox>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-3">
             <label>Telefone: </label>
             <asp:RequiredFieldValidator ID="rfvFone" ControlToValidate="txtFone" ErrorMessage="*" ForeColor="Red" runat="server"></asp:RequiredFieldValidator>
             <asp:TextBox ID="txtFone" runat="server" MaxLength="9" CssClass="form-control" onkeypress="return ValidNumeric()"></asp:TextBox>
         </div>
     </div>
+    
 
     <div class="row" style="margin-top:15px">
         <div class="col-md-7">

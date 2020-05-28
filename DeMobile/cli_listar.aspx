@@ -47,17 +47,17 @@
                     </td>
                     <td>
                         <asp:LinkButton ID="lnkDetalhes" runat="server">
-                            <a href="<%# Eval("id_cli", "detalhes.aspx?id_cli={0}") %>">
+                            <a href="<%# Eval("id_cli", "detalhes_cli.aspx?id_cli={0}") %>">
                                 <span class="fas fa-eye"></span>
                             </a>
                         </asp:LinkButton>
                         <asp:LinkButton ID="LinkButton1" runat="server">
-                            <a href="<%# Eval("id_cli", "editar.aspx?id_cli={0}") %>">
+                            <a href="<%# Eval("id_cli", "editar_cli.aspx?id_cli={0}") %>">
                                 <span class="fas fa-pencil-alt"></span>
                             </a>
                         </asp:LinkButton>
                         <asp:LinkButton ID="LinkButton2" runat="server">
-                            <a href="<%# Eval("id_cli", "remover.aspx?id_cli={0}") %>">
+                            <a href="<%# Eval("id_cli", "remover_cli.aspx?id_cli={0}") %>">
                                 <span class="fas fa-trash-alt"></span>
                             </a>
                         </asp:LinkButton>
