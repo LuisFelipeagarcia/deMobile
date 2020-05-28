@@ -83,4 +83,9 @@
             <asp:Label ID="lblIdEnd" runat="server" Visible="false"></asp:Label>
         </div>
     </div>
+    <div class="row" style="margin-top: 15px">
+        <div class="col-md-12 text-right">
+            <asp:Label ID="lblStt" runat="server" Visible="false" Text="Ativo"></asp:Label>
+        </div>
+    </div>
 </asp:Content>

@@ -40,6 +40,7 @@ namespace DeMobile
             {
                 lblResultado.CssClass = "text-danger";
                 lblResultado.Text = "Falha: " + ex.Message;
+               
             }
             finally
             {
@@ -48,9 +49,8 @@ namespace DeMobile
             return Convert.ToInt32(lblIdEnd.Text);
             
         }
-
-        protected void btnSalvar_Click(object sender, EventArgs e)
-        {    
+        private void insertEnd() 
+        {
             MySqlCommand cmd = new MySqlCommand();
             try
             {
@@ -58,7 +58,7 @@ namespace DeMobile
                 cmd.CommandText = @"insert into ENDERECO (log_end, num_end, comp_end, 
                                 bair_end, cid_end,uf_end)
                                 values
-                                (@logradouro, @numero, @complemento, @bairro, @cidade, @uf)";
+                                (@logradouro, @numero, @complemento, @bairro, @cidade, @uf);";
 
                 cmd.Parameters.AddWithValue("logradouro", txtLog.Text);
                 cmd.Parameters.AddWithValue("numero", txtNum.Text);
@@ -67,16 +67,38 @@ namespace DeMobile
                 cmd.Parameters.AddWithValue("cidade", txtCidade.Text);
                 cmd.Parameters.AddWithValue("uf", txtUF.Text);
 
+                Conexao.Conectar();
+                cmd.ExecuteNonQuery();
+                lblResultado.Text += "Inserido";
+            }
+            catch (Exception ex)
+            {
+                lblResultado.CssClass = "text-danger";
+                lblResultado.Text = "Falha: " + ex.Message;
+            }
+            finally
+            {
+                Conexao.Desconectar();
+            }
+        }
 
+        protected void btnSalvar_Click(object sender, EventArgs e)
+        {    
+            MySqlCommand cmd = new MySqlCommand();                
+            try
+            {
+                cmd.Connection = Conexao.Connection;
+                insertEnd();
                 cmd.CommandText = @"insert into CLIENTE (endereco, nom_cli, email_cli, 
-                                des_numero_cli)
+                                des_numero_cli, stt_cli)
                                 values
-                                (@endereco, @nome, @email, @telefone)";
-
+                                (@endereco, @nome, @email, @telefone, @status);";
+                
                 cmd.Parameters.AddWithValue("endereco", retornarID().ToString());
                 cmd.Parameters.AddWithValue("nome", txtNome.Text);
                 cmd.Parameters.AddWithValue("email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("telefone", txtDdd.Text + txtFone.Text);
+                cmd.Parameters.AddWithValue("status", lblStt.Text);
                 Conexao.Conectar();
                 cmd.ExecuteNonQuery();
                 lblResultado.Text += "Inserido";

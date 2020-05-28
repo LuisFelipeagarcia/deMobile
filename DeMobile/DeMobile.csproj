@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cli_inserir.aspx" />
+    <Content Include="cli_listar.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -97,6 +98,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="img\DeMobile.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -216,6 +218,13 @@
     </Compile>
     <Compile Include="cli_inserir.aspx.designer.cs">
       <DependentUpon>cli_inserir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cli_listar.aspx.cs">
+      <DependentUpon>cli_listar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cli_listar.aspx.designer.cs">
+      <DependentUpon>cli_listar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="Global.asax.cs">
