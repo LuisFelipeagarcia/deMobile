@@ -1,16 +1,28 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="cli_inserir.aspx.cs" Inherits="DeMobile.cli_inserir" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="editar_cli.aspx.cs" Inherits="DeMobile.editar_cli" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="text-center text-primary">
-        <h2>Cadastro de Clientes</h2>
+        <h2>Editar Cliente</h2>
     </div>
 
     <div class="row" style="margin-top:15px">
-        <div class="col-md-12">
+        <div class="col-md-1">
+            <label>ID: </label>
+            <asp:TextBox ID="txtId" runat="server" Enabled="false" CssClass="form-control"></asp:TextBox>
+        </div>
+        <div class="col-md-9">
             <label>Nome: </label>
             <asp:RequiredFieldValidator ID="rfvNome" ControlToValidate="txtNome" ErrorMessage="*" ForeColor="Red" runat="server"></asp:RequiredFieldValidator>
             <asp:TextBox ID="txtNome" runat="server" MaxLength="100" CssClass="form-control"></asp:TextBox>
+        </div>
+        <div class="col-md-2">
+            <label>Status</label>
+            <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-control" >
+                <asp:ListItem Selected="True" Value=""></asp:ListItem>
+                <asp:ListItem Value="ativo">Ativo</asp:ListItem>
+                <asp:ListItem Value="inativo">Inativo</asp:ListItem>
+            </asp:DropDownList>
         </div>
     </div>
     <div class="row" style="margin-top:15px">
@@ -69,7 +81,7 @@
 
     <div class="row" style="margin-top: 15px">
         <div class="col-md-12 text-right">
-            <asp:Button ID="btnSalvar" CssClass="btn btn-primary" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+            <asp:Button ID="btnEditar" CssClass="btn btn-primary" runat="server" Text="Editar" OnClick="btnEditar_Click" />
         </div>
     </div>
     <div class="row" style="margin-top: 15px">

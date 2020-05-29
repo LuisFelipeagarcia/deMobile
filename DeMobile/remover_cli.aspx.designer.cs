@@ -11,17 +11,17 @@ namespace DeMobile
 {
 
 
-    public partial class cli_inserir
+    public partial class remover_cli
     {
 
         /// <summary>
-        /// Controle rfvNome.
+        /// Controle txtId.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNome;
+        protected global::System.Web.UI.WebControls.TextBox txtId;
 
         /// <summary>
         /// Controle txtNome.
@@ -33,13 +33,13 @@ namespace DeMobile
         protected global::System.Web.UI.WebControls.TextBox txtNome;
 
         /// <summary>
-        /// Controle rfvEmail.
+        /// Controle ddlStatus.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+        protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
 
         /// <summary>
         /// Controle txtEmail.
@@ -51,15 +51,6 @@ namespace DeMobile
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// Controle rfvDdd.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDdd;
-
-        /// <summary>
         /// Controle txtDdd.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace DeMobile
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDdd;
-
-        /// <summary>
-        /// Controle rfvFone.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFone;
 
         /// <summary>
         /// Controle txtFone.
@@ -87,15 +69,6 @@ namespace DeMobile
         protected global::System.Web.UI.WebControls.TextBox txtFone;
 
         /// <summary>
-        /// Controle rfvLog.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLog;
-
-        /// <summary>
         /// Controle txtLog.
         /// </summary>
         /// <remarks>
@@ -103,15 +76,6 @@ namespace DeMobile
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLog;
-
-        /// <summary>
-        /// Controle rfvNum.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNum;
 
         /// <summary>
         /// Controle txtNum.
@@ -132,15 +96,6 @@ namespace DeMobile
         protected global::System.Web.UI.WebControls.TextBox txtComp;
 
         /// <summary>
-        /// Controle rfvBairro.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBairro;
-
-        /// <summary>
         /// Controle txtBairro.
         /// </summary>
         /// <remarks>
@@ -148,15 +103,6 @@ namespace DeMobile
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBairro;
-
-        /// <summary>
-        /// Controle rfvCidade.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCidade;
 
         /// <summary>
         /// Controle txtCidade.
@@ -168,15 +114,6 @@ namespace DeMobile
         protected global::System.Web.UI.WebControls.TextBox txtCidade;
 
         /// <summary>
-        /// Controle rfvUF.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUF;
-
-        /// <summary>
         /// Controle txtUF.
         /// </summary>
         /// <remarks>
@@ -186,13 +123,13 @@ namespace DeMobile
         protected global::System.Web.UI.WebControls.TextBox txtUF;
 
         /// <summary>
-        /// Controle btnSalvar.
+        /// Controle btnRemover.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSalvar;
+        protected global::System.Web.UI.WebControls.Button btnRemover;
 
         /// <summary>
         /// Controle lblResultado.

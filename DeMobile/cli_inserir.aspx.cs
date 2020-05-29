@@ -19,7 +19,7 @@ namespace DeMobile
         private int retornarID()
         {
             MySqlCommand cmd = new MySqlCommand();
-            
+            string id ="";
             try
             {
                 
@@ -31,8 +31,8 @@ namespace DeMobile
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    var id = reader["id_end"].ToString();
-                    lblIdEnd.Text = id;
+                    id = reader["id_end"].ToString();
+                    
                     return Convert.ToInt32(id);
                 }
             }
@@ -46,7 +46,7 @@ namespace DeMobile
             {
                 Conexao.Desconectar();
             }
-            return Convert.ToInt32(lblIdEnd.Text);
+            return Convert.ToInt32(id);
             
         }
         private void insertEnd() 
@@ -69,7 +69,7 @@ namespace DeMobile
 
                 Conexao.Conectar();
                 cmd.ExecuteNonQuery();
-                lblResultado.Text += "Inserido";
+               
             }
             catch (Exception ex)
             {
@@ -98,7 +98,7 @@ namespace DeMobile
                 cmd.Parameters.AddWithValue("nome", txtNome.Text);
                 cmd.Parameters.AddWithValue("email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("telefone", txtDdd.Text + txtFone.Text);
-                cmd.Parameters.AddWithValue("status", lblStt.Text);
+                cmd.Parameters.AddWithValue("status", "Ativo".ToString());
                 Conexao.Conectar();
                 cmd.ExecuteNonQuery();
                 lblResultado.Text += "Inserido";
