@@ -9,15 +9,22 @@ using System.Web.UI.WebControls;
 
 namespace DeMobile
 {
-    public partial class cli_listar : System.Web.UI.Page
+    public partial class usu_listar : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string nivel = Session["Perfil"].ToString();
+
+            if (nivel == "O")
+            {
+                btnAdicionar.Visible = false;
+            }
             CarregarUsuarios();
+
         }
         private void CarregarUsuarios()
         {
-            string query = @"select id_cli, nom_cli, stt_cli from cliente order by stt_cli asc, id_cli asc";
+            string query = @"select id_usu, nom_usu, nivel from usuario";
             DataTable dt = new DataTable();
             try
             {
@@ -27,7 +34,6 @@ namespace DeMobile
                 //Popular repeater
                 rptUsuarios.DataSource = dt;
                 rptUsuarios.DataBind();
-                
             }
             catch (Exception ex)
             {
@@ -35,26 +41,28 @@ namespace DeMobile
             }
 
         }
+        protected void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Adicionar.aspx");
+        }
+
         protected void rptUsuarios_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             string nivel = Session["Perfil"].ToString();
 
             var lnkEditar = (LinkButton)e.Item.FindControl("lnkEditar");
             var lnkRemover = (LinkButton)e.Item.FindControl("lnkRemover");
-            
 
-
-            if (lnkEditar != null && lnkRemover != null)
+            if (lnkEditar != null && lnkRemover != null && nivel == "O")
             {
                 lnkEditar.Visible = false;
                 lnkRemover.Visible = false;
             }
         }
-        protected void btnAdicionar_Click(object sender, EventArgs e)
+
+        protected void btnAdicionar_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("cli_inserir.aspx");
+            Response.Redirect("usu_inserir.aspx");
         }
     }
-
-   
 }

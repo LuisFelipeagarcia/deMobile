@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySqlConnector, Version=0.66.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>packages\MySqlConnector.0.66.0\lib\net471\MySqlConnector.dll</HintPath>
@@ -97,11 +100,16 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Default.aspx" />
     <Content Include="detalhes_cli.aspx" />
+    <Content Include="detalhes_usu.aspx" />
     <Content Include="editar_cli.aspx" />
+    <Content Include="editar_usu.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\DeMobile.jpg" />
+    <Content Include="Logout.aspx" />
     <Content Include="remover_cli.aspx" />
+    <Content Include="remover_usu.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -201,7 +209,10 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="style.css" />
     <Content Include="TesteConexao.aspx" />
+    <Content Include="usu_inserir.aspx" />
+    <Content Include="usu_listar.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -230,12 +241,26 @@
       <DependentUpon>cli_listar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Conexao.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="detalhes_cli.aspx.cs">
       <DependentUpon>detalhes_cli.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="detalhes_cli.aspx.designer.cs">
       <DependentUpon>detalhes_cli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalhes_usu.aspx.cs">
+      <DependentUpon>detalhes_usu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalhes_usu.aspx.designer.cs">
+      <DependentUpon>detalhes_usu.aspx</DependentUpon>
     </Compile>
     <Compile Include="editar_cli.aspx.cs">
       <DependentUpon>editar_cli.aspx</DependentUpon>
@@ -244,8 +269,22 @@
     <Compile Include="editar_cli.aspx.designer.cs">
       <DependentUpon>editar_cli.aspx</DependentUpon>
     </Compile>
+    <Compile Include="editar_usu.aspx.cs">
+      <DependentUpon>editar_usu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editar_usu.aspx.designer.cs">
+      <DependentUpon>editar_usu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
@@ -262,12 +301,33 @@
     <Compile Include="remover_cli.aspx.designer.cs">
       <DependentUpon>remover_cli.aspx</DependentUpon>
     </Compile>
+    <Compile Include="remover_usu.aspx.cs">
+      <DependentUpon>remover_usu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="remover_usu.aspx.designer.cs">
+      <DependentUpon>remover_usu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TesteConexao.aspx.cs">
       <DependentUpon>TesteConexao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TesteConexao.aspx.designer.cs">
       <DependentUpon>TesteConexao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usu_inserir.aspx.cs">
+      <DependentUpon>usu_inserir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usu_inserir.aspx.designer.cs">
+      <DependentUpon>usu_inserir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usu_listar.aspx.cs">
+      <DependentUpon>usu_listar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usu_listar.aspx.designer.cs">
+      <DependentUpon>usu_listar.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

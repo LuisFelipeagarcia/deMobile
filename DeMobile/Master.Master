@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="TesteConexao.aspx">Teste BD</a>
+                        <a class="nav-link" href="usu_listar.aspx">Lista de Usuários</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cli_listar.aspx">Lista de cliente</a>
